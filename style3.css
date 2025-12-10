@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+.text-gradient {
+  background-image: linear-gradient(to right, #f472b6, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.font-times {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.section-dark-gray {
+  background-color: #111827;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem); 
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 2rem; 
+  background-image: linear-gradient(to right, #f472b6, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(to right, #ec4899, #a855f7);
+  color: white;
+  border: none;
+  font-weight: 500;
+  transition: background-image 0.3s ease, color 0.3s ease;
+}
+.btn-gradient:hover {
+  opacity: 0.8;
+  color: white;
+}
+.btn-gradient.scrolled {
+  background-image: linear-gradient(to right, #a78bfa, #ec4899);
+  color: black;
+}
+.btn-gradient.scrolled:hover {
+  color: white;
+}
+
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 80px;
+}
+
+.navbar-brand {
+  flex-basis: 20%;
+}
+
+.logo-img {
+  height: 5rem;
+  width: auto; 
+  max-width: 20rem;
+  filter: invert(0);
+  transition: filter 0.3s ease;
+}
+.logo-img.scrolled {
+  filter: invert(1);
+}
+
+.navbar-nav {
+  flex-basis: 60%;
+  justify-content: center;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 1.25rem;
+  color: #f472b6;
+  transition: color 0.3s ease;
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link.scrolled {
+  color: black;
+}
+.navbar-light .navbar-nav .nav-link.scrolled:hover{
+  color: #f472b6;
+}
+
+.dropdown-item {
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.dropdown-menu-dark .dropdown-item.scrolled {
+  color: black;
+  background-color: white;
+}
+.dropdown-menu-dark .dropdown-item.scrolled:hover {
+  color: #f472b6;
+  background-color: #f8f9fa;
+}
+
+.nav-icon-link {
+  color: #f472b6;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+.nav-icon-link:hover {
+  color: #fff;
+}
+.nav-icon-link.scrolled {
+  color: black;
+}
+.nav-icon-link.scrolled:hover {
+  color: #f472b6;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-brand.me-auto {
+    margin-right: 0 !important;
+  }
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  .navbar .d-flex.align-items-center.ms-auto {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .navbar .d-flex.align-items-center.ms-auto .btn {
+    width: 45%;
+  }
+  .navbar .d-flex.align-items-center.ms-auto .btn:last-child {
+    margin-left: 0.5rem;
+  }
+  .navbar-nav .nav-item {
+    text-align: center;
+  }
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 52rem; 
+  margin: 0 auto;
+  overflow: hidden; 
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 2rem -0.85rem rgb(255, 255, 255);
+}
+
+.slider {
+  display: flex;
+  width: 400%;
+  animation: slide 8s ease-in-out infinite;
+}
+
+.slider-img {
+  width: 25%;
+  flex-shrink: 0; 
+  
+  aspect-ratio: 16 / 9;
+  object-fit: cover; 
+  height: auto; 
+  max-height: 480px; 
+}
+
+@keyframes slide {
+  0%, 20% { transform: translateX(0%); } 
+  25%, 45% { transform: translateX(-25%); } 
+  50%, 70% { transform: translateX(-50%); } 
+  75%, 95% { transform: translateX(-75%); } 
+  100% { transform: translateX(0%); } 
+}
+
+
+.slider-nav {
+  display: none;
+}
+
+.event-card {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+.event-card-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to right, #f472b6, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.event-card-description {
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+  line-height: 1.625;
+  font-size: 1.125rem;
+}
+
+.event-card-image-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.event-card-image {
+  width: 100%;
+  height: 25rem; 
+  object-fit: cover;
+  display: block; 
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.contact-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: #f472b6;
+  margin-right: 0.75rem;
+}
+.contact-icon.interactive {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.contact-icon.interactive:hover {
+  color: #f9a8d4;
+}
+
+.footer {
+  background-image: linear-gradient(to right, #ec4899, #a855f7);
+  color: white;
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  color: #e5e7eb;
+}
+.footer-links li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-links li a:hover {
+  color: #f9fafb;
+}
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  color: #e5e7eb;
+}
+
+.footer-bottom {
+  border-top: 1px solid #f9a8d4;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 1.125rem;
+  color: #f9fafb;
+}
